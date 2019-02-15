@@ -1,3 +1,5 @@
+'use strict';
+
 class Module extends React.Component {
 
     // constructor gets called when the component is created
@@ -31,14 +33,15 @@ class Module extends React.Component {
 
         // When state changes, render gets called to refresh the element!
         this.setState(state => ({
-            name: "In Progress!",
-            progress: 1
-        }));   
+            progress: (this.state.progress <= 90) ? this.state.progress+10 : 100 // Update the progress of the element by 10%
+        })); 
     }
 
     render() {
+        // If an element is in progress (greater than 0%), show it with an extra class to make it green (in-progress)
         return (<li className={(this.state.progress > 0) ? 'module in-progress' : 'module'} onClick={this.handleClick}>
-                    <a href="#">{this.state.name}</a>
+                    <div><a href="#">{this.state.name}</a></div>
+                    <div>Progress: {this.state.progress}</div>
                 </li>);
     }
 }

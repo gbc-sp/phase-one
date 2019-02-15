@@ -1,3 +1,5 @@
+'use strict';
+
 class ModuleList extends React.Component {
 
     constructor(props) {
@@ -12,6 +14,7 @@ class ModuleList extends React.Component {
     }
 
     render() {
+        // A loop that runs once for every element in the "modules" Array
         const moduleList = this.state.modules.map((mod, k) =>
             <Module key={k} name={mod.name} progress={mod.progress} />
         );
