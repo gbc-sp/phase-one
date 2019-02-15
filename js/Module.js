@@ -41,7 +41,7 @@ class Module extends React.Component {
         // If an element is in progress (greater than 0%), show it with an extra class to make it green (in-progress)
         return (<li className={(this.state.progress > 0) ? 'module in-progress' : 'module'} onClick={this.handleClick}>
                     <div><a href="#">{this.state.name}</a></div>
-                    <div>Progress: {this.state.progress}%</div>
+                    <div>Progress: {(this.state.progress < 100) ? this.state.progress + `%` : "Complete"}</div>
                 </li>);
     }
 }
