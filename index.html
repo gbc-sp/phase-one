@@ -12,7 +12,11 @@
 
   <body>
 
+    <!-- The entire application will live here in this one <div>. See index.js to see how it <App /> loads into #app -->
     <div id="app"></div>
+
+
+    
 
     <!-- Load up React & Babel v16 (latest) from remote -->
     <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -24,12 +28,15 @@
     <script src="js/react/react.development.js"></script>
     <script src="js/react/react-dom.development.js"></script>
     
-    <!-- All component files here (temporary) -->
+    <!-- All component files load here (temporary, we'll move to import/export model) -->
     <script src="js/ModuleList.js" type="text/babel"></script>
     <script src="js/Module.js" type="text/babel"></script>
 
-    <!-- App loading -->
+    <!-- App loading component -->
     <script src="js/App.js" type="text/babel"></script>
+
+    <!-- Kick-off the application -->
+    <script src="js/index.js" type="text/babel"></script>
 
   </body>
 </html>

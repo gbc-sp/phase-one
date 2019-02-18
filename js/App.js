@@ -22,5 +22,6 @@ class App extends React.Component {
     }
 }
 
-// Create an "App" Component and put in the HTML div with `id="app"`.
-ReactDOM.render( <App />, document.getElementById('app') );
+
+/* // Uncomment when we run this project from NodeJS:
+export default App; */
